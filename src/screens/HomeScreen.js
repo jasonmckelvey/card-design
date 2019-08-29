@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import Card from "../components/Card";
+import ProjectCardHome from "../components/ProjectCardHome";
 import styled from "styled-components";
 
 const styles = StyleSheet.create({});
@@ -8,7 +8,7 @@ const styles = StyleSheet.create({});
 const HomeScreen = () => {
   return (
     <View style={{ margin: 8 }}>
-      <Card />
+      <ProjectCardHome />
       <Text></Text>
     </View>
   );
