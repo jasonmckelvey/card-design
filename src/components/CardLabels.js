@@ -9,11 +9,16 @@ const Container = styled.View`
   /* border-width: 1px;
   border-color: red; */
   flex-direction: row;
+  flex: 1;
+  overflow: hidden;
 `;
 
 const CardLabels = () => {
   return (
     <Container>
+      <Label color="#9B59B6" value="This is my label" />
+      <Label color="#E67E22" />
+      <Label color="#2ECC71" />
       <Label color="#9B59B6" value="This is my label" />
       <Label color="#E67E22" />
       <Label color="#2ECC71" />

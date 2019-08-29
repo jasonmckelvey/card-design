@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { ScrollView, View, Text, StyleSheet } from "react-native";
 import HomeProjectCard from "../components/HomeProjectCard";
 import NearbyProjectCard from "../components/NearbyProjectCard";
+import FeedProjectCard from "../components/FeedProjectCard";
 
 import styled from "styled-components";
 
@@ -11,12 +12,18 @@ const Spacer = styled.View`
 
 const HomeScreen = () => {
   return (
-    <View style={{ margin: 8 }}>
-      <HomeProjectCard />
-      <Spacer />
-      <NearbyProjectCard />
-      <Text></Text>
-    </View>
+    <ScrollView>
+      <View style={{ flex: 1, padding: 16 }}>
+        <HomeProjectCard />
+        <Spacer />
+        <NearbyProjectCard />
+        <Spacer />
+        <FeedProjectCard />
+        <Spacer />
+        <Spacer />
+        <Spacer />
+      </View>
+    </ScrollView>
   );
 };
 

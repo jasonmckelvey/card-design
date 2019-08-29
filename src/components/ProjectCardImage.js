@@ -8,7 +8,7 @@ const Container = styled.View`
 
 const Hero = styled.Image`
   flex: 1;
-  background-color: #b0b7bb;
+  background-color: #e0e4e6;
   overflow: hidden;
 `;
 
