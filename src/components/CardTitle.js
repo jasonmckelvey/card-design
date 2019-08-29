@@ -6,10 +6,12 @@ const Title = styled.Text`
   /* border-width: 1px; */
   font-size: 18;
   font-weight: 600;
+  color: #1d262b;
+  margin: 0px 0px 4px 0px;
 `;
 
 const CardTitle = ({ title }) => {
-  return <Title>{title}</Title>;
+  return <Title numberOfLines={1}>{title}</Title>;
 };
 
 CardTitle.defaultProps = {

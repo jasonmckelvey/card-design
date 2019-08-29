@@ -3,6 +3,15 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import CardButton from "./CardButton";
+import { MaterialIcons, MaterialCommunityIcons } from "@expo/vector-icons";
+
+const ShareIcon = (
+  <MaterialCommunityIcons name="telegram" size={20} color="#1d262b" />
+);
+
+const PhotoIcon = <MaterialIcons name="camera-alt" size={20} color="#1d262b" />;
+
+const MenuIcon = <MaterialIcons name="menu" size={20} color="#1d262b" />;
 
 const Container = styled.View`
   padding: 16px;
@@ -15,9 +24,9 @@ const Container = styled.View`
 const CardLabels = () => {
   return (
     <Container>
-      <CardButton value="Share" />
-      <CardButton value="Photo" />
-      <CardButton value="More" />
+      <CardButton icon={ShareIcon} value="Share" />
+      <CardButton icon={PhotoIcon} value="Photo" />
+      <CardButton icon={MenuIcon} value="More" />
     </Container>
   );
 };

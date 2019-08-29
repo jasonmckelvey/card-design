@@ -14,13 +14,24 @@ const Divider = styled.View`
   background-color: #e0e4e6;
 `;
 
-const ProjectCardHome = ({ children }) => {
+const HeroWrapper = styled.View`
+  height: 150px;
+`;
+
+const HomeProjectCard = () => {
   return (
-    <Card>
-      <ProjectCardImage />
+    <Card width={280}>
+      <HeroWrapper>
+        <ProjectCardImage
+          topRight={4}
+          topLeft={4}
+          height={"100%"}
+          width={280}
+        />
+      </HeroWrapper>
       <CardHeader
-        title="McKelvey House"
-        subtitle="6123 NW Gary St Lincoln NE 68502"
+        title="McKelvey House Ahhhhhhhhhhhhhhhhhhhhhh"
+        subtitle="6123 NW Gary St • Lincoln NE 68502222222222222222"
       />
       <CardLabels />
       <Divider />
@@ -29,8 +40,6 @@ const ProjectCardHome = ({ children }) => {
   );
 };
 
-ProjectCardHome.propTypes = {
-  children: PropTypes.node
-};
+HomeProjectCard.propTypes = {};
 
-export default ProjectCardHome;
+export default HomeProjectCard;

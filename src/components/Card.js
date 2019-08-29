@@ -3,16 +3,16 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Base = styled.View`
-  width: 280px;
-  margin: 0px 0px 0px 8px;
   background-color: #fff;
   border-radius: 4px;
 `;
 
-const Card = ({ children }) => {
+const Card = ({ children, width, height }) => {
   return (
     <Base
       style={{
+        width: width,
+        height: height,
         elevation: 4,
         // offblack
         shadowColor: "#1D262B",
@@ -27,7 +27,9 @@ const Card = ({ children }) => {
 };
 
 Card.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  width: PropTypes.number,
+  height: PropTypes.number
 };
 
 export default Card;

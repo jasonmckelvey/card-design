@@ -10,7 +10,6 @@ const Container = styled.View`
 `;
 
 const ButtonIcon = styled.View`
-  background-color: blue;
   height: 20px;
   width: 20px;
   margin: 0px 4px 0px 0px;
@@ -19,13 +18,14 @@ const ButtonIcon = styled.View`
 const ButtonText = styled.Text`
   font-size: 14px;
   font-weight: 600;
+  color: #1d262b;
   /* border-width: 1; */
 `;
 
-const CardButton = ({ value }) => {
+const CardButton = ({ value, icon }) => {
   return (
     <Container>
-      <ButtonIcon />
+      <ButtonIcon>{icon}</ButtonIcon>
       <ButtonText>{value}</ButtonText>
     </Container>
   );
@@ -36,6 +36,7 @@ CardButton.defaultProps = {
 };
 
 CardButton.propTypes = {
+  icon: PropTypes.node,
   value: PropTypes.string
 };
 

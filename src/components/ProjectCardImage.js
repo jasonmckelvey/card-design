@@ -4,29 +4,52 @@ import styled from "styled-components";
 
 const Container = styled.View`
   overflow: hidden;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
 `;
 
 const Hero = styled.Image`
-  height: 159px;
-  width: 280px;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+  flex: 1;
   background-color: #b0b7bb;
   overflow: hidden;
 `;
 
-const ProjectCardImage = ({ children }) => {
+const ProjectCardImage = ({
+  children,
+  height,
+  width,
+  topLeft,
+  topRight,
+  bottomLeft,
+  bottomRight
+}) => {
   return (
-    <Container>
+    <Container
+      style={{
+        height: height,
+        width: width,
+        borderTopLeftRadius: topLeft,
+        borderTopRightRadius: topRight,
+        borderBottomLeftRadius: bottomLeft,
+        borderBottomRightRadius: bottomRight
+      }}
+    >
       <Hero>{children}</Hero>
     </Container>
   );
 };
 
 ProjectCardImage.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  height: PropTypes.string,
+  width: PropTypes.number
+};
+
+ProjectCardImage.defaultProps = {
+  height: {},
+  width: {},
+  topLeft: 0,
+  topRight: 0,
+  bottomLeft: 0,
+  bottomRight: 0
 };
 
 export default ProjectCardImage;

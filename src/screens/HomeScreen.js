@@ -1,14 +1,20 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
-import ProjectCardHome from "../components/ProjectCardHome";
+import HomeProjectCard from "../components/HomeProjectCard";
+import NearbyProjectCard from "../components/NearbyProjectCard";
+
 import styled from "styled-components";
 
-const styles = StyleSheet.create({});
+const Spacer = styled.View`
+  height: 24px;
+`;
 
 const HomeScreen = () => {
   return (
     <View style={{ margin: 8 }}>
-      <ProjectCardHome />
+      <HomeProjectCard />
+      <Spacer />
+      <NearbyProjectCard />
       <Text></Text>
     </View>
   );

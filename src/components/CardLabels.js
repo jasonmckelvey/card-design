@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
+import Label from "./Label";
+
 const Container = styled.View`
   padding: 0px 16px 16px 16px;
   /* border-width: 1px;
@@ -9,19 +11,12 @@ const Container = styled.View`
   flex-direction: row;
 `;
 
-const Label = styled.View`
-  background-color: green;
-  height: 24px;
-  width: 50;
-  margin: 0px 4px 0px 0px;
-`;
-
 const CardLabels = () => {
   return (
     <Container>
-      <Label />
-      <Label />
-      <Label />
+      <Label color="#9B59B6" value="This is my label" />
+      <Label color="#E67E22" />
+      <Label color="#2ECC71" />
     </Container>
   );
 };
